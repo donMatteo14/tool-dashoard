@@ -1,0 +1,98 @@
+/* Stili di base (Modalità Chiara - Light Mode) - MANTIENI QUESTI */
+body {
+    padding: 20px;
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    color: #6ea8fe;
+  }
+  
+  /* Stili per la Modalità Scura (Dark Mode) - MANTIENI QUESTI */
+  body.dark-mode {
+    background-color: #121212;
+    color: #1a1a1a;
+  }
+ .text.dark-mode{
+    color: white;
+  }
+  
+  body.dark-mode h1 {
+    color: #66b0ff;
+  }
+
+  .card.dark-mode{
+    background-color: #ccc;
+  }
+  
+  /* === NUOVI STILI PER LO SLIDER === */
+  
+  /* Contenitore dello slider (la label) */
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;  /* Larghezza dello slider */
+    height: 34px; /* Altezza dello slider */
+    cursor: pointer;
+    vertical-align: middle; /* Allinea con testo adiacente se necessario */
+  }
+  
+  /* Nasconde il checkbox di default */
+  .theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute; /* Rimuove dallo spazio visibile */
+  }
+  
+  /* Lo sfondo/tracciato dello slider */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Colore sfondo slider (spento/light mode) */
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* Il pallino/cursore dello slider */
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 26px; /* Altezza pallino */
+    width: 26px;  /* Larghezza pallino */
+    left: 4px;    /* Posizione iniziale sinistra */
+    bottom: 4px;  /* Posizione iniziale basso */
+    background-color: white; /* Colore pallino */
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* Stile quando il checkbox è selezionato (slider acceso/dark mode) */
+  input:checked + .slider {
+    background-color: #0056b3; /* Colore sfondo slider acceso (puoi usare lo stesso blu di h1 o un altro) */
+  }
+  
+  
+  /* Movimento del pallino quando acceso */
+  input:checked + .slider::before {
+    -webkit-transform: translateX(26px); /* Sposta a destra */
+    -ms-transform: translateX(26px);
+    transform: translateX(26px); /* Distanza dello spostamento = larghezza slider - larghezza pallino - (2 * spazio laterale) = 60 - 26 - (2*4) = 26 */
+  }
+  
+  /* Opzionale: Forma arrotondata */
+  .slider.round {
+    border-radius: 34px; /* Rende il tracciato tondo */
+  }
+  
+  .slider.round::before {
+    border-radius: 50%; /* Rende il pallino tondo */
+  }
+  
+  /* === FINE STILI SLIDER === */

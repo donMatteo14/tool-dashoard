@@ -1,0 +1,6 @@
+*{margin:0; padding: 0; box-sizing: border-box;}
+:root{
+    --font : Arial, sans-serif;
+    --bg : #f4f4f4;
+    --shadowEffect : #00000033;
+}

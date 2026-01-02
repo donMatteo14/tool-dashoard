@@ -1,0 +1,74 @@
+@import url(../qrGenerator/qrStandard.css);
+@import url(../homepage/darkMode.css);
+*{margin: 0; padding: 0; box-sizing: border-box;}
+    .form{display: flex; flex-direction: column; width:50%;}
+    body{display:flex; flex-direction:column; align-items:center; justify-content:center}
+    /* Stili per la tabella */
+    .ip-geo-table {
+        width: 90%;
+        max-width: 600px; /* Limite larghezza massima */
+        margin: 25px auto; /* Centra la tabella */
+        border-collapse: collapse; /* Bordi uniti */
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden; /* Per arrotondare gli angoli */
+    }
+
+    .ip-geo-table th,
+    .ip-geo-table td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    /* Colonna degli header (etichette) */
+    .ip-geo-table th {
+        background-color: #f4f7f6;
+        font-weight: bold;
+        color: #333;
+        width: 30%; /* Occupa il 30% della larghezza */
+    }
+
+    /* Colonna dei dati */
+    .ip-geo-table td {
+        background-color: #ffffff;
+    }
+
+    /* Colori alternati per le righe */
+    .ip-geo-table tr:nth-child(even) td {
+        background-color: #fdfdfd;
+    }
+
+    /* Stile per l'eventuale errore */
+    .ip-error {
+        color: #D8000C;
+        background-color: #FFD2D2;
+        border: 1px solid #D8000C;
+        padding: 10px;
+        width: 90%;
+        max-width: 600px;
+        margin: 25px auto;
+        text-align: center;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Stile per il titolo */
+    h2 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #444;
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        font-weight: bold;
+        margin-top: 2vh;
+        transition: 0.3 ease;
+        cursor: pointer;
+        background-color: var(--buttonBg);
+    }

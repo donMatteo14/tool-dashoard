@@ -1,0 +1,27 @@
+@import url("standard.css");
+@media screen and (max-width:700px) {
+    body{
+        font-family: var(--font);
+        text-align: center;
+        background-color: var(--bg);
+        padding: 5vh;
+    }
+
+    h1{
+        margin: 2vh 0 1vh 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        margin: auto;
+    }
+    
+    .card {
+        background: white;
+        padding: 4vh;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--shadowEffect);
+    }
+}

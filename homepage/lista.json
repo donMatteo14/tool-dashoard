@@ -1,0 +1,22 @@
+[
+    {
+        "nome" : "Generatore QR code",
+        "link" : "qrGenerator/qrcode.html",
+        "icon" : "assets/qrImage.png"
+    },
+    {
+        "nome" : "Convertitore .webp in .JPG /.PNG",
+        "link" : "webpConverter/converter.html",
+        "icon" : "assets/converter.png"
+    },
+    {
+        "nome" : "IP info",
+        "link" : "ipInfo/ip.php",
+        "icon" : "assets/globo.png"
+    },
+    {
+        "nome" : "Gestore squadra",
+        "link" : "squadra/squadra.html",
+        "icon" : "assets/squadra.png"
+    }
+]

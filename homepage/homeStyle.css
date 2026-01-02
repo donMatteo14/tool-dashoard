@@ -1,0 +1,37 @@
+@import url("standard.css");
+@media screen and (min-width:700px) {
+    body {
+        font-family: var(--font);
+        text-align: center;
+        background-color: var(--bg);
+        padding: 5vh;
+    }
+    
+    h1 {
+        margin-top: 2vh;
+        margin-bottom: 20px;
+    }
+    h2{color:black;}
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px var(--shadowEffect);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px var(--shadowEffect);
+    }
+    
+}

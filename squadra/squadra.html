@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="squadra.css">
+    <link rel="shortcut icon" href="../assets/iconSite.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../homepage/darkMode.css">
+    <title>Gestore Squadre Smart</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div id="toast-container"></div>
+
+<div class="container">
+    <h1>Gestore Squadre</h1>
+
+    <div id="setup-panel">
+        
+        <div class="roster-manager">
+            <h3>1. Gestisci la tua Rosa</h3>
+            <p style="font-size: 0.9em; color: #666; margin-bottom: 20px;">I nomi vengono salvati automaticamente in memoria.</p>
+            
+            <div class="input-group">
+                <input type="text" id="nuovoGiocatore" placeholder="Nome Giocatore" autocomplete="off">
+                <button class="btn-primary" onclick="aggiungiGiocatore()">Aggiungi</button>
+            </div>
+            
+            <ul id="lista-giocatori">
+                </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px;">
+            <h3>2. Imposta Partita</h3>
+            <label for="nGiocatori" style="font-size: 1.1em; margin-right: 10px;">Numero totale giocatori:</label>
+            <select id="nGiocatori" style="width: auto; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+                <option value="8">8 (4 vs 4)</option>
+                <option value="10" selected>10 (5 vs 5)</option>
+                <option value="12">12 (6 vs 6)</option>
+                <option value="14">14 (7 vs 7)</option>
+            </select>
+            <br><br>
+            <button class="btn-primary" style="font-size: 1.2em; padding: 12px 40px; box-shadow: 0 4px 6px rgba(0,123,255,0.3);" onclick="vaiAlleSquadre()">Crea Tabellone</button>
+        </div>
+    </div>
+
+    <div id="builder-panel" class="hidden">
+        <div id="capture-area" style="background-color: white; padding: 15px; border-radius: 8px;">
+            <h2 style="margin-bottom: 10px; color: #333;">Formazione Squadre</h2>
+            <div class="flex-teams">
+                <div class="squadra">
+                    <h3>Squadra A</h3>
+                    <div id="slots-a"></div>
+                </div>
+                <div class="squadra">
+                    <h3>Squadra B</h3>
+                    <div id="slots-b"></div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-success" onclick="mostraModaleExport()">Salva Squadre</button>
+        <button class="btn-secondary" onclick="tornaIndietro()" style="width: 100%;">Torna alla Rosa</button>
+    </div>
+</div>
+
+<div id="confirm-modal" class="modal-overlay">
+    <div class="modal-box">
+        <h3 id="confirm-title" style="margin-top:0">Conferma</h3>
+        <p id="confirm-message">Sei sicuro?</p>
+        <div class="modal-buttons">
+            <button id="confirm-yes-btn" class="btn-primary" style="background-color: #dc3545;">Elimina</button>
+            <button class="btn-secondary" style="margin-top:0" onclick="chiudiConfirm()">Annulla</button>
+        </div>
+    </div>
+</div>
+
+<div id="export-modal" class="modal-overlay">
+    <div class="modal-box">
+        <h3 style="color: #28a745;">Squadre Pronte!</h3>
+        <p>Le formazioni sono state create con successo.</p>
+        <div class="modal-buttons" style="flex-direction: column;">
+            <button class="btn-primary" onclick="esportaJPG()">Scarica JPG</button>
+            <button class="btn-secondary" onclick="document.getElementById('export-modal').classList.remove('active')">Chiudi</button>
+        </div>
+    </div>
+</div>
+<a href="../index.html"><input type="button" value="Torna alla home page" id="return"></a>
+    <h2 class="text">Imposta il tema chiaro/scuro</h2>
+    <label style="margin-left: 48%;" class="theme-switch" for="theme-slider" title="Attiva/Disattiva Dark Mode">
+        <input type="checkbox" id="theme-slider">
+        <span class="slider round"></span>
+    </label>
+    <script src="../homepage/darkMode.js"></script>
+<script src="squadra.js"></script>
+</body>
+</html>

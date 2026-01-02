@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="converterStyle.css">
+    <link rel="stylesheet" href="converterStyleResponse.css">
+    <link rel="shortcut icon" href="../assets/iconSite.ico" type="image/x-icon">
+    <title>Convertitore WebP</title>
+</head>
+<body>
+    <h2 class="text">Convertitore .webp in .JPG /.PNG</h2>
+    <div class="form" id="form">
+        <div class="custom-file-upload">
+            <input type="file" id="fileInput" style="display: none;" accept="image/webp">
+            <label for="fileInput" class="custom-button">
+                Carica Immagine .webp
+            </label>
+            <span id="fileNameDisplay" class="file-name-display">Nessun file selezionato.</span>
+        </div>
+        
+        <button onclick="startConversion('jpg')">Converti in JPG</button>
+        <button onclick="startConversion('png')">Converti in PNG</button>
+        
+        <div id="status"></div>
+        <button id="downloadButton" style="visibility: hidden;"><a id="downloadLink" style="display:none; text-decoration:none; color:white">Scarica File</a></button>
+    </div>
+    <a href="../index.html"><input type="button" value="Torna alla home page"></a>
+    <h2 class="text">Imposta il tema chiaro/scuro</h2>
+    <label class="theme-switch" for="theme-slider" title="Attiva/Disattiva Dark Mode">
+        <input type="checkbox" id="theme-slider">
+        <span class="slider round"></span>
+    </label>
+    <script src="converterScript.js"></script>
+    <script src="../homepage/darkMode.js"></script>
+</body>
+</html>

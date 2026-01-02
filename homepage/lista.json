@@ -15,8 +15,8 @@
         "icon" : "assets/globo.png"
     },
     {
-        "nome" : "TBA",
-        "link" : "#",
-        "icon" : ""
+        "nome" : "Gestore squadra",
+        "link" : "squadra/squadra.html",
+        "icon" : "assets/squadra.png"
     }
 ]

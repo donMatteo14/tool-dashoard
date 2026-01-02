@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genera QR Code Personalizzato</title>
+    <link rel="stylesheet" href="qrStyle.css">
+    <link rel="stylesheet" href="qrStyleResponse.css">
+    <link rel="shortcut icon" href="../assets/iconSite.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <h2 class="text">Genera il tuo QR Code</h2>
+    <div class="form">
+        <div id="error"></div>
+        <!-- Campo di input per l'URL -->
+        <input type="text" id="userUrl" placeholder="Inserisci un URL">
+        <button onclick="generateQRCode()">Genera QR Code</button>
+        <!-- Contenitore per il QR code -->
+        <div id="qrcode"></div>
+        <button id="download" onclick="downloadQRCode()">Scarica QR Code</button>
+    </div>
+    <a href="../index.html"><input type="button" value="Torna alla home page" id="return"></a>
+    <h2 class="text">Imposta il tema chiaro/scuro</h2>
+    <label class="theme-switch" for="theme-slider" title="Attiva/Disattiva Dark Mode">
+        <input type="checkbox" id="theme-slider">
+        <span class="slider round"></span>
+    </label>
+    <script src="qrScript.js"></script>
+    <script src="../homepage/darkMode.js"></script>
+</body>
+</html>

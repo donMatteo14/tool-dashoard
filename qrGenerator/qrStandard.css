@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {margin: 0;padding: 0;box-sizing: border-box;}
+:root{
+    --font : "Roboto", serif;
+    --bgColor : #ece9e6;
+    --shadowEffect : #00000033;
+    --pColor : #555;
+    --buttonBg : #007bff;
+    --buttonEffect : #0056b3;
+}

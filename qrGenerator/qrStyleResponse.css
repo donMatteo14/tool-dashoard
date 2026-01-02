@@ -1,0 +1,52 @@
+@import url("standard.css");
+@media screen and (max-width:600px) {
+    body{
+        font-family: var(--font);
+        background-color: var(--bgColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .form{
+        text-align: center;
+        background-color: white;
+        padding: 5vh;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px var(--shadowEffect);
+    }
+    h2 {margin: 4vh;}
+    
+    p {
+        font-size: 16px;
+        color: var(--pColor);
+        margin-bottom: 2vh;
+    }
+    
+    input, button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    button, #return {
+        margin-top: 2vh;
+        background: var(--buttonBg);
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    #qrcode {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+    } 
+    #error{
+        display: none;
+        color: #D60D0D;
+    }
+}

@@ -18,5 +18,10 @@
         "nome" : "Gestore squadra",
         "link" : "squadra/squadra.html",
         "icon" : "assets/squadra.png"
+    },
+    {
+        "nome" : "New Day (Andorid)",
+        "link" : "newDayAndroid/download.html",
+        "icon" : "#"
     }
 ]

@@ -22,6 +22,6 @@
     {
         "nome" : "New Day (Andorid)",
         "link" : "newDayAndroid/download.html",
-        "icon" : "#"
+        "icon" : "assets/flutter.png"
     }
 ]
